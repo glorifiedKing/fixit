@@ -47,7 +47,7 @@ return [
     'google' => [
     'client_id' => env('GOOGLE_CLIENT_ID','114160331836-ia9or0kepmjp4igbeaeblffb6e05kds6.apps.googleusercontent.com'),
     'client_secret' => env('GOOGLE_CLIENT_SECRET','Y00pTtZXMB3u-WHCehBg0hAz'),
-    'redirect' => 'https://testfixit.ml/home',
+    'redirect' => env('GOOGLE_REDIRECT','https://testfixit.ml/login/google/callback',
 ],
 
 ];
