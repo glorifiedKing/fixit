@@ -18,5 +18,6 @@ Route::get('/professionals', function () {
     return view('frontend.pages.professionals');
 });
 Auth::routes();
-
+Route::get('login/google', 'Auth\LoginController@redirectToGoogle')->name('googleAuth');
+Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback')->name('googleAuthCallback');
 Route::get('/home', 'HomeController@index')->name('home');
