@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.pages.homepage');
 });
-
+Route::get('/professionals', function () {
+    return view('frontend.pages.professionals');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
