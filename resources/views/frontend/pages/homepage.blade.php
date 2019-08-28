@@ -4,7 +4,7 @@
   <li class="nav-item"><a class="nav-link"  href="{{url('/professionals')}}">Professionals</a></li>
   <li class="nav-item"><a class="nav-link"  href="{{url('/')}}">Store</a></li>
   <li class="nav-item"><a class="nav-link"  href="{{url('/login')}}" class="wallet-listing">Wallet</a></li>
-  <li class="nav-item"><a class="nav-link"  href="{{url('/login')}}"><img src="{{asset('img/user_account_icon.png')}}"></a></li>
+  
 @endsection
 
 @section('content')
