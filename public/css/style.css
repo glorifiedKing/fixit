@@ -1,0 +1,25 @@
+.options-wrapper{
+    height: 150px;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+.options-wrapper a {
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #FAB017;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+}
+
+.options-wrapper a {
+    color: #FAB017;
+}
+
+.options-wrapper a:hover {
+    background-color: #FAB017;
+    color: #fff;
+    text-decoration: none;
+}
