@@ -18,6 +18,7 @@ class CreateWalletsTable extends Migration
             $table->string('wallet_id')->unique();
             $table->unsignedBigInteger('user_id');
             $table->string('currency',4)->default('UGX');
+            $table->tinyInteger('active')->default(0);
             $table->timestamps();
         });
     }
