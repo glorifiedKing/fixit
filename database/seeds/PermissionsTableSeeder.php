@@ -68,7 +68,7 @@ class PermissionsTableSeeder extends Seeder
             6 =>
             array (
                 'id' => 7,
-                'name' => 'ViewSchools',
+                'name' => 'ViewServiceCategories',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:28:02',
                 'updated_at' => '2018-11-14 17:28:02',
@@ -76,7 +76,7 @@ class PermissionsTableSeeder extends Seeder
             7 =>
             array (
                 'id' => 8,
-                'name' => 'CreateSchools',
+                'name' => 'CreateServiceCategories',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:28:42',
                 'updated_at' => '2018-11-14 17:28:42',
@@ -84,7 +84,7 @@ class PermissionsTableSeeder extends Seeder
             8 =>
             array (
                 'id' => 9,
-                'name' => 'UpdateSchools',
+                'name' => 'UpdateServiceCategories',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:29:12',
                 'updated_at' => '2018-11-14 17:29:12',
@@ -92,7 +92,7 @@ class PermissionsTableSeeder extends Seeder
             9 =>
             array (
                 'id' => 10,
-                'name' => 'DeleteSchools',
+                'name' => 'DeleteServiceCategories',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:29:45',
                 'updated_at' => '2018-11-14 17:29:45',
@@ -100,7 +100,7 @@ class PermissionsTableSeeder extends Seeder
             10 =>
             array (
                 'id' => 11,
-                'name' => 'ViewParents',
+                'name' => 'ViewVendors',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:38:13',
                 'updated_at' => '2018-11-14 17:38:13',
@@ -108,7 +108,7 @@ class PermissionsTableSeeder extends Seeder
             11 =>
             array (
                 'id' => 12,
-                'name' => 'UpdateParents',
+                'name' => 'UpdateVendors',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:38:42',
                 'updated_at' => '2018-11-14 17:38:42',
@@ -116,7 +116,7 @@ class PermissionsTableSeeder extends Seeder
             12 =>
             array (
                 'id' => 13,
-                'name' => 'CreateParents',
+                'name' => 'CreateVendors',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:39:17',
                 'updated_at' => '2018-11-14 17:39:17',
@@ -124,7 +124,7 @@ class PermissionsTableSeeder extends Seeder
             13 =>
             array (
                 'id' => 14,
-                'name' => 'DeleteParents',
+                'name' => 'DeleteVendors',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:40:00',
                 'updated_at' => '2018-11-14 17:40:00',
@@ -132,7 +132,7 @@ class PermissionsTableSeeder extends Seeder
             14 =>
             array (
                 'id' => 15,
-                'name' => 'ViewStudents',
+                'name' => 'ViewProfessionals',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:47:02',
                 'updated_at' => '2018-11-14 17:47:02',
@@ -140,7 +140,7 @@ class PermissionsTableSeeder extends Seeder
             15 =>
             array (
                 'id' => 16,
-                'name' => 'CreateStudents',
+                'name' => 'CreateProfessionals',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:47:31',
                 'updated_at' => '2018-11-14 17:47:31',
@@ -148,7 +148,7 @@ class PermissionsTableSeeder extends Seeder
             16 =>
             array (
                 'id' => 17,
-                'name' => 'UpdateStudents',
+                'name' => 'UpdateProfessionals',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:48:14',
                 'updated_at' => '2018-11-14 17:48:14',
@@ -156,7 +156,7 @@ class PermissionsTableSeeder extends Seeder
             17 =>
             array (
                 'id' => 18,
-                'name' => 'DeleteStudents',
+                'name' => 'DeleteProfessionals',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:49:23',
                 'updated_at' => '2018-11-14 17:49:23',
@@ -164,7 +164,7 @@ class PermissionsTableSeeder extends Seeder
             18 =>
             array (
                 'id' => 19,
-                'name' => 'ViewMerchants',
+                'name' => 'ViewProducts',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 17:55:14',
                 'updated_at' => '2018-11-14 17:55:14',
@@ -172,7 +172,7 @@ class PermissionsTableSeeder extends Seeder
             19 =>
             array (
                 'id' => 20,
-                'name' => 'UpdateMerchants',
+                'name' => 'UpdateProducts',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 18:05:48',
                 'updated_at' => '2018-11-14 18:05:48',
@@ -180,7 +180,7 @@ class PermissionsTableSeeder extends Seeder
             20 =>
             array (
                 'id' => 21,
-                'name' => 'CreateMerchants',
+                'name' => 'CreateProducts',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 18:06:54',
                 'updated_at' => '2018-11-14 18:06:54',
@@ -188,7 +188,7 @@ class PermissionsTableSeeder extends Seeder
             21 =>
             array (
                 'id' => 22,
-                'name' => 'DeleteMerchants',
+                'name' => 'DeleteProducts',
                 'guard_name' => 'web',
                 'created_at' => '2018-11-14 18:07:49',
                 'updated_at' => '2018-11-14 18:07:49',

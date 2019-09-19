@@ -25,7 +25,7 @@ class RolesTableSeeder extends Seeder
           1 =>
           array (
               'id' => 2,
-              'name' => 'Parent',
+              'name' => 'Professional',
               'guard_name' => 'web',
               'created_at' => '2019-08-14 13:37:27',
               'updated_at' => '2019-08-14 13:37:27',
@@ -33,11 +33,11 @@ class RolesTableSeeder extends Seeder
           2 =>
           array (
               'id' => 3,
-              'name' => 'Student',
+              'name' => 'Vendor',
               'guard_name' => 'web',
               'created_at' => '2019-08-14 13:37:33',
               'updated_at' => '2019-08-14 13:37:33',
-          ),          
+          ),
         ));
     }
 }
