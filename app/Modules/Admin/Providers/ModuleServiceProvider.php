@@ -25,7 +25,7 @@ class ModuleServiceProvider extends ServiceProvider
               [
                 'text' => 'Admin',
                 'url'  => '',
-                'icon' => 'cog',
+                'icon' => 'fas fa-fw fa-user',
                 'submenu' =>
                     [
 
