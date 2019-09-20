@@ -9,8 +9,11 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "caffeinated/modules": "^6.0",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
+        "jeroennoten/laravel-adminlte": "^2.0",
+        "laracasts/flash": "^3.0",
         "laravel/framework": "6.0.*",
         "laravel/socialite": "^4.1",
         "laravel/tinker": "^1.0",
