@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Modules\Wallet\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +13,6 @@ class Wallet extends Model
 
     public function transactions()
     {
-      return $this->hasMany('App\WalletTransaction','wallet_account');
+      return $this->hasMany('App\Modules\Wallet\Models\WalletTransaction','wallet_account');
     }
 }

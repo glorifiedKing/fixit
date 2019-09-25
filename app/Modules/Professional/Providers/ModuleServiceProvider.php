@@ -15,9 +15,9 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function boot(Dispatcher $events)
     {
-        $this->loadTranslationsFrom(module_path('professional', 'Resources/Lang', 'app'), 'sms');
-        $this->loadViewsFrom(module_path('professional', 'Resources/Views', 'app'), 'sms');
-        $this->loadMigrationsFrom(module_path('professional', 'Database/Migrations', 'app'), 'sms');
+        $this->loadTranslationsFrom(module_path('professional', 'Resources/Lang', 'app'), 'professional');
+        $this->loadViewsFrom(module_path('professional', 'Resources/Views', 'app'), 'professional');
+        $this->loadMigrationsFrom(module_path('professional', 'Database/Migrations', 'app'), 'professional');
         $this->loadConfigsFrom(module_path('professional', 'Config', 'app'));
         $this->loadFactoriesFrom(module_path('professional', 'Database/Factories', 'app'));
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
@@ -30,10 +30,10 @@ class ModuleServiceProvider extends ServiceProvider
                     [
 
           							[
-            							'text' => 'New Sms',
-            							'url'  => route('admin.roles.index'),
-            							'icon' => 'envelope',
-                          'can'  => 'View Investors',
+            							'text' => 'View',
+            							'url'  => route('pro.backend.list'),
+            							'icon' => 'fas fa-fw fa-user',
+                          'can'  => 'ViewProfessionals',
 
           							],
                         [

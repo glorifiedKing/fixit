@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-use App\Professional;
-use App\Vendor;
-use App\Wallet;
+use App\Modules\Professional\Models\Professional;
+use App\Modules\Shop\Models\Vendor;
+use App\Modules\Wallet\Models\Wallet;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -56,11 +56,11 @@ class RegisterController extends Controller
           'first_name' => ['required', 'string', 'max:255'],
           'last_name' => ['required', 'string', 'max:255'],
           'country_id' => ['required', 'numeric'],
-          'service_categories' => ['required_if:user_type,professional', 'numeric'],
-          'date_of_birth' => ['required_if:user_type,student', 'date'],
-          'student_school_id' => ['required_if:user_type,student'],
-          'national_id' => ['required_if:user_type,parent'],
-          'phone_number' => ['required_if:user_type,parent', 'numeric'],
+          'service_categories.*' => ['required_if:user_type,professional'],
+          'phone_number' => ['required_if:user_type,professional', 'numeric'],
+          'professional_photo' => ['required_if:user_type,professional','image'],
+          'description' => ['required_if:user_type,professional'],
+          'national_id' => ['required_if:user_type,professional'],
           'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
           'password' => ['required', 'string', 'min:8', 'confirmed'],
 
@@ -82,6 +82,7 @@ class RegisterController extends Controller
         ]);
 
         */
+        $request = request();
         //get usertype first
         $user_type = $data['user_type'];
         $name = $data['first_name'].' '.$data['middle_name'].' '.$data['last_name'];
@@ -93,21 +94,32 @@ class RegisterController extends Controller
           $professional->first_name = $data['first_name'];
           $professional->middle_name = $data['middle_name'];
           $professional->last_name = $data['last_name'];
-          $professional->nationality = $data['nationality'];
           $professional->national_id = $data['national_id'];
-          $professional->date_of_birth = $data['date_of_birth'];
-          $professional->school_id = $data['school_id'];
-          $professional->student_school_id = $data['student_school_id'];
-          $professional->gender = $data['gender'];
+          $professional->phone_number = $data['phone_number'];
           $professional->email = $data['email'];
+          $professional->company_name = $data['company_name'];
+          $professional->company_address = $data['company_address'];
+          $professional->display = $data['display'];
+          $professional->description = $data['description'];
+          $professional->country_id = $data['country_id'];
+          $professional->professional_photo = $request->professional_photo->getClientOriginalName();
+
+          //save profile pic
+          $request->professional_photo->storeAs('professionals', $request->professional_photo->getClientOriginalName());
           $professional->save();
+
+          //attach services.
+          $services = $request->service_categories;
+          foreach ($services as $key => $value) {
+            $professional->services()->attach($value);
+          }
 
           $user = User::create([
               'name' => $name,
               'email' => $data['email'],
               'password' => Hash::make($data['password']),
-              'palmuser_type' => 'App\Student',
-              'palmuser_id' => $professional->id,
+              'fixituser_type' => 'App\Modules\Professional\Models\Professional',
+              'fixituser_id' => $professional->id,
 
           ]);
           $user->assignRole('Professional');

@@ -25,7 +25,7 @@ class CreateProfessionalsTable extends Migration
             $table->text('company_address')->nullable();
             $table->string('display')->default('person');
             $table->text('description')->nullable();
-            $table->integer('status')->default(1);
+            $table->integer('status')->default(0);
             $table->integer('country_id');
             $table->text('professional_photo')->nullable();
             $table->timestamps();

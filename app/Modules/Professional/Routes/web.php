@@ -11,8 +11,9 @@
 |
 */
 
-Route::group(['prefix' => 'professional'], function () {
-    Route::get('/', function () {
-        dd('This is the Professional module index page. Build something great!');
-    });
+Route::group(['prefix' => 'professional','middleware'=>['web','auth']],  function () {
+    Route::get('/list',['as'=>'pro.backend.list','uses'=>'ProfessionalController@list']);
+    Route::get('/view/{id}',['as'=>'pro.edit','uses'=>'ProfessionalController@EditPro']);
+    Route::get('/delete/{id}',['as'=>'pro.delete','uses'=>'ProfessionalController@DeletePro']);
+
 });

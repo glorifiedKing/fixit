@@ -15,9 +15,9 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function boot(Dispatcher $events)
     {
-        $this->loadTranslationsFrom(module_path('wallet', 'Resources/Lang', 'app'), 'sms');
-        $this->loadViewsFrom(module_path('wallet', 'Resources/Views', 'app'), 'sms');
-        $this->loadMigrationsFrom(module_path('wallet', 'Database/Migrations', 'app'), 'sms');
+        $this->loadTranslationsFrom(module_path('wallet', 'Resources/Lang', 'app'), 'wallet');
+        $this->loadViewsFrom(module_path('wallet', 'Resources/Views', 'app'), 'wallet');
+        $this->loadMigrationsFrom(module_path('wallet', 'Database/Migrations', 'app'), 'wallet');
         $this->loadConfigsFrom(module_path('wallet', 'Config', 'app'));
         $this->loadFactoriesFrom(module_path('wallet', 'Database/Factories', 'app'));
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {

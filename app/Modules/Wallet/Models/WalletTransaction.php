@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Modules\Wallet\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,12 +11,12 @@ class WalletTransaction extends Model
     ];
     public function wallet()
     {
-      return $this->belongsTo('App\Wallet','wallet_account');
+      return $this->belongsTo(Wallet::class,'wallet_account');
     }
 
     public function trans_type()
     {
-      return $this->belongsTo('App\TransactionType','transaction_type');
+      return $this->belongsTo('App\Modules\Shared\Models\TransactionType','transaction_type');
     }
 
     public function vendor()
@@ -25,6 +25,6 @@ class WalletTransaction extends Model
     }
     public function payment_gateway()
     {
-      return $this->belongsTo('App\PaymentGateway','payment_gateway_id');
+      return $this->belongsTo('App\Modules\Shared\Models\PaymentGateway','payment_gateway_id');
     }
 }
