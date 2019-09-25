@@ -105,7 +105,7 @@ class RegisterController extends Controller
           $professional->professional_photo = $request->professional_photo->getClientOriginalName();
 
           //save profile pic
-          $request->professional_photo->storeAs('professionals', $request->professional_photo->getClientOriginalName());
+          $request->professional_photo->storeAs('pros', $request->professional_photo->getClientOriginalName());
           $professional->save();
 
           //attach services.

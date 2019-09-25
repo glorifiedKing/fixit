@@ -27,3 +27,23 @@
 .required-field {
   color: red;
 }
+
+.professionals-list {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.professionals-list li {
+    margin: 1%;
+}
+
+a {
+    color: #818181;
+}
+
+a,a:hover,a:focus {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+}

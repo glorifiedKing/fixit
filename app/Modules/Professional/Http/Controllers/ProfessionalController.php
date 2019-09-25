@@ -28,4 +28,6 @@ class ProfessionalController extends Controller
     //  dd($professionals);
       return view('professional::backend.pro.list',compact('professionals'));
     }
+
+  
 }
